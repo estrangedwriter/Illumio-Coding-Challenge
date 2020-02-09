@@ -31,7 +31,7 @@ From the terminal, you can execute the code by inputting the following command:
 
 > python3 main.py
 
-And you will get output with boolean values.
+And you will get output with boolean values (Either true or false). See the source code to see which rules are being queried.
 
 ### Testing the Code
 
