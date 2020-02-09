@@ -23,6 +23,7 @@ Rather than trying to write an algorithm that could calculate a range of an octe
 the IP address to an integer instead. I then converted the integer back to an IP address. 
 I did this using the ipaddress module.
 
+All rules were converted into tuples, and then added to a dictionary. 
 
 ### Running the Code
 
