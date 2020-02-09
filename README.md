@@ -29,7 +29,7 @@ All rules were converted into tuples, and then added to a dictionary.
 
 From the terminal, you can execute the code by inputting the following command:
 
-##### python3 main.py
+python3 main.py
 
 And you will get output with boolean values.
 
@@ -37,9 +37,11 @@ And you will get output with boolean values.
 
 The end-user can alter the CSV file however she desires. If the end-user is running the code in a Python IDE or interpreter
 the accept_packet function works. 
+
 Example: 
-> fw.accept_packet('inbound','tcp',80,'192.168.2.3) #would return a boolean value True or False
-True #(or false, it depends on what is listed in the CSV file). 
+
+> fw.accept_packet('inbound','tcp',80,'192.168.2.3)            #would return a boolean value True or False
+> True                                             #(or false, it depends on what is listed in the CSV file). 
 
 ### Refinements
 
