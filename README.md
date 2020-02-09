@@ -33,6 +33,14 @@ From the terminal, you can execute the code by inputting the following command:
 
 And you will get output with boolean values.
 
+### Testing the Code
+
+The end-user can alter the CSV file however she desires. If the end-user is running the code in a Python IDE or interpreter
+the accept_packet function works. 
+Example: 
+> fw.accept_packet('inbound','tcp',80,'192.168.2.3) #would return a boolean value True or False
+True #(or false, it depends on what is listed in the CSV file). 
+
 ### Refinements
 
 If I had more time, I would run unit tests and timer tests to determine the speed with which my constructor can 
