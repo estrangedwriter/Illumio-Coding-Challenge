@@ -1,4 +1,4 @@
-#### Illumio Coding Challenge
+### Illumio Coding Challenge
 Read a CSV file, given a set of firewall rules, a network packet will be accepted by the firewall if and only if the
 direction, protocol, port, and IP address match at least one of the input rules. If a rule contains
 a port range, it will match all packets whose port falls within the range. If a rule contains an IP
@@ -39,6 +39,6 @@ construct the dictionary, with all the rules. I think that the code performs wel
 My computer crashed when I tried to include the IP address range from 0.0.0.0 - 255.255.255.255 but the code can handle
 65,000 ports easily.
 
-#This project was developed on Linux Ubuntu OS and PyCharm; I have 2 Linux computers at home. One for software development, 
-and I have a 4GB Raspberry Pi that is set up to program Arduino controllerboards. Thank you.
+# This project was developed on Linux Ubuntu OS and PyCharm; I have 2 Linux computers at home. One for software development, 
+# and I have a 4GB Raspberry Pi that is set up to program Arduino controllerboards. Thank you.
 
