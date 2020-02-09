@@ -13,7 +13,7 @@ true, if there exists a rule in the file that this object was initialized with t
 with these particular properties, and false otherwise.
 
 
-#### Problem Solving and Designing a Solution
+### Problem Solving and Designing a Solution
 Writing a constructor that could read and interpret a CSV file would not be too difficult. However, because there could be ranges 
 for the port component and for the IP-address component of the CSV file, helper functions would be needed.
 I wrote a helper function to add all rules within a port range to a dictionary.
@@ -24,15 +24,15 @@ the IP address to an integer instead. I then converted the integer back to an IP
 I did this using the ipaddress module.
 
 
-#### Running the Code
+### Running the Code
 
 From the terminal, you can execute the code by inputting the following command:
 
-###### python3 main.py
+##### python3 main.py
 
 And you will get output with boolean values.
 
-#### Refinements
+### Refinements
 
 If I had more time, I would run unit tests and timer tests to determine the speed with which my constructor can 
 construct the dictionary, with all the rules. I think that the code performs well but it could be slightly faster.
