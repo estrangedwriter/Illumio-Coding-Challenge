@@ -39,6 +39,6 @@ construct the dictionary, with all the rules. I think that the code performs wel
 My computer crashed when I tried to include the IP address range from 0.0.0.0 - 255.255.255.255 but the code can handle
 65,000 ports easily.
 
-##### This project was developed on Linux Ubuntu OS and PyCharm; I have 2 Linux computers at home. One for software development, 
-##### and I have a 4GB Raspberry Pi that is set up to program Arduino controllerboards. Thank you.
+##### This project was developed on Linux Ubuntu OS 16GB RAM and PyCharm; I have 2 Linux computers at home. One for software development, 
+##### and I have a Raspberry Pi w/4GB RAM that is set up to program Arduino controllerboards. Thank you.
 
