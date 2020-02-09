@@ -40,7 +40,8 @@ the accept_packet function works.
 
 Example:
 
-> fw.accept_packet('inbound','tcp',80,'192.168.2.3)            
+> fw.accept_packet ("inbound","tcp",80,"192.168.2.3")            
+> True
 
 #would return a boolean value True or False, it depends on what is listed in the CSV file. End-user can alter it 
 however she wants to test the code but it should work as long as the values in the CSV file are formatted properly
