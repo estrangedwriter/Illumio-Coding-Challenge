@@ -66,10 +66,13 @@ class Firewall(dict):
             return False
         else:
             return True
+     
+    def return_length(self):
+        return len((self.items))
 
-### main executable function
+    ### main executable function
 if __name__ == '__main__':
-    fw = Firewall()               ### The main executable function will initialize 'Packets' into a Firewall class which stores all of the rules in a dictionary.
+    fw = Firewall()               ### The main executable function will initialize 'fw' into a Firewall class which stores all of the rules in a dictionary.
     print(fw.accept_packet("inbound","tcp",80,"192.168.1.2"))
     print(fw.accept_packet("inbound","udp",53,"192.168.2.1"))
     print(fw.accept_packet("outbound","tcp",10234,"192.168.10.11"))
