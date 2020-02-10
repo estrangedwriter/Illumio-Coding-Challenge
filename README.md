@@ -14,16 +14,23 @@ with these particular properties, and false otherwise.
 
 
 ### Problem Solving and Designing a Solution
-Writing a constructor that could read and interpret a CSV file would not be too difficult. However, because there could be ranges 
-for the port component and for the IP-address component of the CSV file, helper functions would be needed.
+
+Dictionaries and tuples came to mind, when I was thinking of how to create a class with a constructor that could read and interpret a CSV file with 500k-1 million rules. 
+
+When the CSVreader reads a CSV file, it reads each row as a list. By converting every rule into a tuple, I could then add each tuple to a dictionary. There are four components in each row or list of the CSV file; the four components of the list are as follows: 
+
+>'Direction', 'protocol', 'port(s)','ip_address(es)'.
+
+Because there could be ranges for the port component and for the IP-address component for each row of the CSV file, helper functions would be needed. The CSVreader is reading the 'port(s)' and 'ip_address(es)' components.
+
 I wrote a helper function to add all rules within a port range to a dictionary.
 I also wrote a helper function to add all rules within an IP address range to a dictionary. 
 
-Rather than trying to write an algorithm that could calculate a range of an octect for IP Addresses, I simply converted 
-the IP address to an integer instead. I then converted the integer back to an IP address. 
-I did this using the ipaddress module.
+Apparently, every single IP address from 0.0.0.0 to 255.255.255.255 is assigned to a corresponding integer. Rather than trying to write an algorithm that could calculate a range of an octect for IP Addresses, I simply converted 
+the two IP addresses (the range) to their corresponding integers. Once I knew the range I could determine how many tuples were needed to be added. You can see the source code to see more clearly how I converted IP Address ranges, as well as the port ranges.
 
-All rules were converted into tuples, and then added to a dictionary. 
+All rules were converted into tuples, and then added to a dictionary class Firewall. 
+The constructor function of class Firewall would start up the CSVreader. 
 
 ### Running the Code
 
@@ -61,5 +68,5 @@ My top preference is the Data Team. My second preference is the Platform team.
 
 ### Closing
 
-This project was developed on Linux Ubuntu OS 16GB RAM and PyCharm. Linux is the best operating system
+This project was developed on Linux Ubuntu OS 16GB RAM and PyCharm. Linux is the best operating system. Cheers!
 
