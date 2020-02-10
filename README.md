@@ -23,13 +23,16 @@ When the CSVreader reads a CSV file, it reads each row as a list. By converting 
 
 >'Direction', 'protocol', 'port(s)','ip_address(es)'.
 
-Because there could be ranges for the port component and for the IP-address component for each row of the CSV file, helper functions would be needed. The CSVreader is reading the 'port(s)' and 'ip_address(es)' components.
+Because there could be ranges for the port component and for the IP-address component for each row of the CSV file, helper functions would be needed. The helper functions can read the 'port(s)' and 'ip_address(es)' components if there is a range in either component.
 
-I wrote a helper function to add all rules within a port range to a dictionary.
-I also wrote a helper function to add all rules within an IP address range to a dictionary. 
+I wrote a helper function that could convert lists to tuples.
+I also wrote a helper function to add all rules within a port range to a dictionary.
+Lastly, I wrote a helper function to add all rules within an IP address range to a dictionary. 
 
-Apparently, every single IP address from 0.0.0.0 to 255.255.255.255 is assigned to a corresponding integer. Rather than trying to write an algorithm that could calculate a range of an octect for IP Addresses, I simply converted 
-the two IP addresses (the range) to their corresponding integers. Once I knew the range I could determine how many tuples were needed to be added. You can see the source code to see more clearly how I converted IP Address ranges, as well as the port ranges.
+Apparently, every single IP address from 0.0.0.0 to 255.255.255.255 is assigned to a corresponding integer. 0.0.0.0 is assigned to the integer 1, while 0.0.0.100 is assigned to the integer 100. 0.0.1.0 is assigned to the integer 256. The ipaddress module is built-in to Python apparently, and you can convert IP addresses to integer with a simple command, and vice versa (converting integers to IP addresses).
+
+Rather than trying to write an algorithm that could calculate a range of an octect for IP Addresses, I simply converted 
+the two IP addresses (the range) to their corresponding integers. Once I knew the range between the two IP addresses, I could determine how many tuples were needed to be added. You can see the source code to see more clearly how I converted IP Address ranges, as well as the port ranges.
 
 All rules were converted into tuples, and then added to a dictionary class Firewall. 
 The constructor function of class Firewall would start up the CSVreader. 
