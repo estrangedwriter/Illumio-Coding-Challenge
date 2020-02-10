@@ -56,12 +56,22 @@ Example:
 however she wants to test the code but it should work as long as the values in the CSV file are formatted properly
 (no spaces, no empty rows).
 
+Two methods I wrote associated with the 'Firewall' class are 
+
+>fw.print_packet()
+    and
+>fw.return_length()
+
+The print_packet method will allow you to view the contents of the Firewall dictionary class. The return_length() method 
+allows you to see how many unique entries or rules are in the Firewall class.
+
 
 ### Refinements
 
 If I had more time, I would run unit tests and timer tests to determine the speed with which my constructor can 
 construct the dictionary, with all the rules. I think that the code performs well but it could be slightly faster.
-My computer crashed when I tried to include the IP address range from 0.0.0.0 - 255.255.255.255 (that's 16 million IP addresses) but the code can handle 65,000 ports easily. The code can handle 500k-1million entries as well. 
+My computer crashed when I tried to include the IP address range from 0.0.0.0 - 255.255.255.255 (that's 16 million IP addresses) but the code can handle 65,000 ports easily. The code can handle 500k-1million entries as well; you can test for 
+1 million entries by adjusting the IP address ranges in the CSV file.
 
 ### Team Preference
 
