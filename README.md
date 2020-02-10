@@ -61,7 +61,7 @@ however she wants to test the code but it should work as long as the values in t
 
 If I had more time, I would run unit tests and timer tests to determine the speed with which my constructor can 
 construct the dictionary, with all the rules. I think that the code performs well but it could be slightly faster.
-My computer crashed when I tried to include the IP address range from 0.0.0.0 - 255.255.255.255 (that's 16 million IP addresses) but the code can handle 65,000 ports easily. The code can handle 500k-1million entries on a decent computer. 
+My computer crashed when I tried to include the IP address range from 0.0.0.0 - 255.255.255.255 (that's 16 million IP addresses) but the code can handle 65,000 ports easily. The code can handle 500k-1million entries as well. 
 
 ### Team Preference
 
