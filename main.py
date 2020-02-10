@@ -9,7 +9,7 @@ ports = {}
 def convert(list):
     return tuple(list)
 
-### helper function to convert tuples with a port range, to individual tuples with port integer(s)
+### helper function to convert CSV rows (lists) with a port range, to individual tuples with port integer(s)
 def parseports(list):
 
     if re.search('-', list[2]):                                ### If there is a dash in the ports column...
@@ -25,7 +25,7 @@ def parseports(list):
         tup = convert(list)
         ports[tup] = ports.get(tup,0)+1
 
-### helper function to convert tuples with an IP Address range, to individual tuple(s) with individual IP Address(es)
+### helper function to convert CSV rows (lists) with an IP Address range, to individual tuple(s) with individual IP Address(es)
 def parseip_address(list):
 
     if re.search('-', list[3]):
@@ -41,7 +41,7 @@ def parseip_address(list):
         tup = convert(list)
         ports[tup] = ports.get(tup,0)+1
 
-###Dictionary class to map all of the Rules
+###Dictionary 'Firewall' class to map all of the Rules
 class Firewall(dict):
 
     def __init__(self):                                    ### Constructor to read the CSV file with the inputs
