@@ -29,7 +29,7 @@ I wrote a helper function that could convert lists to tuples.
 I also wrote a helper function to add all rules within a port range to a dictionary.
 Lastly, I wrote a helper function to add all rules within an IP address range to a dictionary. 
 
-Apparently, every single IP address from 0.0.0.0 to 255.255.255.255 is assigned to a corresponding integer. 0.0.0.0 is assigned to the integer 1, while 0.0.0.100 is assigned to the integer 100. 0.0.1.0 is assigned to the integer 256. The ipaddress module is built-in to Python apparently, and you can convert IP addresses to integer with a simple command, and vice versa (converting integers to IP addresses).
+Apparently, every single IP address from 0.0.0.0 to 255.255.255.255 is assigned to a corresponding integer. 0.0.0.0 is assigned to the integer 1, while 0.0.0.100 is assigned to the integer 101. 0.0.1.0 is assigned to the integer 256 and 255.255.255.255 is assigned to the integer 256^4. The ipaddress module is built-in to Python apparently, and you can convert IP addresses to integer with a simple command, and vice versa (converting integers to IP addresses).
 
 Rather than trying to write an algorithm that could calculate a range of an octect for IP Addresses, I simply converted 
 the two IP addresses (the range) to their corresponding integers. Once I knew the range between the two IP addresses, I could determine how many tuples were needed to be added. You can see the source code to see more clearly how I converted IP Address ranges, as well as the port ranges.
@@ -73,8 +73,8 @@ allows you to see how many unique entries or rules are in the Firewall class.
 
 If I had more time, I would run unit tests and timer tests to determine the speed with which my constructor can 
 construct the dictionary, with all the rules. I think that the code performs well but it could be slightly faster.
-PyCharm crashed when I tried to include the IP address range from 0.0.0.0 - 255.255.255.255 (that's 16 million IP addresses) but the code can handle 65,000 ports easily. The code can handle 500k-1million entries as well; you can test for 
-1 million entries by adjusting the IP address ranges in the CSV file. It took under 1 second for me to crunch 450k rules with the code. Not sure why the program crashes the maximum IP range (0.0.0.0 - 255.255.255.255); maybe because of the limitations of the Python interpreter and limited memory. 
+PyCharm crashed when I tried to include the IP address range from 0.0.0.0 - 255.255.255.255 (that's over 4 billion IP addresses) but the code can handle 65,000 ports easily. The code can handle 500k-1million entries as well; you can test for 
+1 million entries by adjusting the IP address ranges in the CSV file. It took under 1 second for me to crunch 450k rules with the code. Not sure why the program crashes the maximum IP range (0.0.0.0 - 255.255.255.255); maybe because of the limitations of the Python interpreter, the dictionary data structure itself, and/or limited memory. 
 
 ### Team Preference
 
