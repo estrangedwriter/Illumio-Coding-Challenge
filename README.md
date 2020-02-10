@@ -59,5 +59,7 @@ My computer crashed when I tried to include the IP address range from 0.0.0.0 - 
 
 My top preference is the Data Team. My second preference is the Platform team.
 
-##### This project was developed on Linux Ubuntu OS 16GB RAM and PyCharm; I have 2 Linux computers at home. One for software development, and I have a Raspberry Pi w/4GB RAM that is set up to program Arduino controllerboards. Thank you.
+### Closing
+
+This project was developed on Linux Ubuntu OS 16GB RAM and PyCharm. Linux is the best operating system
 
