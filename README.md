@@ -74,7 +74,7 @@ allows you to see how many unique entries or rules are in the Firewall class.
 If I had more time, I would run unit tests and timer tests to determine the speed with which my constructor can 
 construct the dictionary, with all the rules. I think that the code performs well but it could be slightly faster.
 PyCharm crashed when I tried to include the IP address range from 0.0.0.0 - 255.255.255.255 (that's over 4 billion IP addresses) but the code can handle 65,000 ports easily. The code can handle 500k-1million entries as well; you can test for 
-1 million entries by adjusting the IP address ranges in the CSV file. It took under 1 second for me to crunch 450k rules with the code. Not sure why the program crashes the maximum IP range (0.0.0.0 - 255.255.255.255); maybe because of the limitations of the Python interpreter, the dictionary data structure itself, and/or limited memory. 
+1 million entries by adjusting the IP address ranges in the CSV file. It took under 1 second for me to crunch 450k rules with the code. 
 
 ### Team Preference
 
