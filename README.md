@@ -82,5 +82,5 @@ My top preference is the Data Team. My second preference is the Platform team.
 
 ### Closing
 
-This project was developed on Linux Ubuntu OS 16GB RAM and PyCharm. Linux is the best operating system. Cheers!
+This project was developed on Linux Ubuntu OS 16GB RAM and PyCharm. 
 
